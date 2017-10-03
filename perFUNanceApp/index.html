@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hrApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>perFUNance</title>
+
+    <!--Google Fonts Gloria Halleluja-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <!-- Bootstrap CDN 3.3.7-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Drop Down Plug-ins-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Angular CDN 1.5.7 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+
+    <!-- Angular UI Router CDN 0.4.2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+</head>
+
+<body class="body-site">
+    
+    <!--Content-->
+    <div ui-view></div>
+
+    <!-- Footer -->
+
+    <footer class="fixed-bottom footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright 2017 © perFUNance, Inc.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Module -->
+    <script type="text/javascript" src="./app.js"></script>
+
+    <!--Services -->
+    <script type="text/javascript" src="./services/rewardsService.js"></script>
+    <script type="text/javascript" src="./services/userService.js"></script>
+    <script type="text/javascript" src="./services/cartService.js"></script>
+    <script type="text/javascript" src="./services/reviewService.js"></script>
+    <script type="text/javascript" src="./services/transactionService.js"></script>
+    <script type="text/javascript" src="./services/gameService.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="./controllers/accountController.js"></script>
+    <script type="text/javascript" src="./controllers/cartController.js"></script>
+    <script type="text/javascript" src="./controllers/gameController.js"></script>
+    <script type="text/javascript" src="./controllers/loginController.js"></script>
+    <script type="text/javascript" src="./controllers/manageController.js"></script>
+    <script type="text/javascript" src="./controllers/rewardsController.js"></script>
+    <script type="text/javascript" src="./controllers/reviewController.js"></script>
+    <script type="text/javascript" src="./controllers/navbarController.js"></script>
+
+    <!--Components -->
+    <script type="text/javascript" src="./components/navbar/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<div style="color: black" class="container">
+    <h2 class="text-center">Let's Get Ready to GAMBLE!!!!</h2>
+    <h3 class="text-center">Enter the # of points you would like to LOSE. You current have: </h3> 
+    <h3 class="text-center">{{ currentPoints }}</p>
+
+    <div class="row gamerow">
+        <label for="pointInput"></label>
+        <input class="text-center" type="number" ng-model="pointInput" placeholder="e.g 20"> Points
+        <h4 class="text-center">Bonus Points: {{ bonusPoints }}</h4>
+    </div>
+    </div>
+        <h4 class="text-center" ng-show= "emptypoints" style="color: red; font-weight: bold">Points CANNOT be left empty!</h4>
+        <h4 class="text-center" ng-show= "toomanypoints" style="color: red; font-weight: bold">You DO NOT have enough points! Try again!</h4>
+    
+    <table class="minefield" border="1">
+        <tr ng-repeat="row in minefield.rows">
+            <td ng-repeat="spot in row.spots" ng-right-click="flag(spot)" ng-click="uncoverSpot(spot)">
+                <img class="spot" ng-if="spot.isCovered  && spot.flagged == false" src="./css/images/covered.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 0" src="./css/images/empty.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 'mine'" src="./css/images/mine.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 1" src="./css/images/1.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 2" src="./css/images/2.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 3" src="./css/images/3.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 4" src="./css/images/4.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 5" src="./css/images/5.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 6" src="./css/images/6.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 7" src="./css/images/7.png">
+                <img class="spot" ng-if="!spot.isCovered && spot.content == 8" src="./css/images/8.png">
+                <img class="spot" ng-if="spot.isCovered && spot.flagged == true" src="./css/images/flagged.png">
+            </td>
+        </tr>
+    </table>
+    <h3 class="text-center" ng-if="isWinMessageVisible"> You won! </h3>
+    <h3 class="text-center" ng-if="isLostMessageVisible"> You Lost!</h3>
+</div>

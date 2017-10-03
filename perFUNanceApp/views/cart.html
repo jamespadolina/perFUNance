@@ -1,0 +1,40 @@
+<div style="color: white"class="container">
+    <table id="cart" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th style="width:50%">Product</th>
+                <th style="width:10%">Price</th>
+                <th style="width:8%">Quantity</th>
+                <th style="width:10%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in cart track by $index">
+                <td data-th="Drinks">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs"><img src={{item.image}} class="img-responsive" /></div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">{{ item.itemName }}</h4>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price">{{ item.cost }}</td>
+                <td data-th="Quantity">
+                    <p type="number" class="text-center">1</p>
+                </td>
+                <td class="actions" data-th="">
+                    <button ng-click="deleteItem(item)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center"><strong>Total {{ total }}</strong></td>
+            <td colspan="2" class="hidden-xs"></td>
+        </tfoot>
+    </table>
+    <div class="col-sm-12">
+        <button ng-click="checkout()" ng-show="cart != []" type="submit" class="finalcheckout btn btn-sm btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></button>
+    </div>
+</div>
+<!-- Container End -->

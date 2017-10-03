@@ -1,0 +1,13 @@
+<div style="color: white" class="container">
+    <div class="row">
+        <div class="col-md-4 reward-card" ng-repeat="r in rewards">
+            <img class="rewardimg" src="{{r.image}}"/>
+            <p><b>Name: </b>{{ r.name }}</p>
+            <p><b>Cost: </b>{{ r.cost }} points</p>
+            <button ng-click="addToCart(r)" class="btn btn-sm btn-success">Add to Cart</button>
+        </div>
+    </div>
+    <div class="text-center">
+        <button ui-sref="app.cart" class="btn btn-md btn-primary"> Go to Cart</button>
+    </div>
+</div>

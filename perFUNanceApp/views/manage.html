@@ -1,0 +1,97 @@
+<div class="container manage">
+    <div class="row display">
+        <div class="form-group">
+            <h2 class="text-center">Administration Panel</h2>
+            <h3>User Administration</h3>
+            <h4>Search For Users</h4>
+            <input type="text" class="form-control" placeholder="Search..." ng-model="userSearch">
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3 display-card" ng-repeat="u in users | filter: userSearch | startFrom:currentPageUser | limitTo:pageSize">
+                <p><b>Employee ID: </b>{{ u.id }}</p>
+                <p><b>Name: </b>{{ u.firstName }} {{ u.middleName }} {{ u.lastName}}</p>
+                <p><b>DOB: </b>{{ u.birthDate | date : 'shortDate' }}</p>
+                <button ui-sref="app.editAccount({ id: {{u.id}} })" class="btn btn-sm btn-info">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deleteAccount(u)">Delete</button>
+            </div>
+        </div>
+        <div class="filter btn-group-wrap">
+            <div class="btn-group">
+                <button class="btn btn-sm filter" ng-disabled="currentPageUser == 0" ng-click="previousPageUser()">
+                    Previous
+                </button>
+                <button class="btn btn-sm filter" ng-disabled="currentPageUser >= users.length - pageSize" ng-click="nextPageUser()">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row display">
+        <div class="form-group ">
+            <h3>Review Administration</h3>
+            <h4>Search For Reviews</h4>
+            <input type="text" class="form-control" placeholder="Search..." ng-model="reviewSearch">
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3 display-card" ng-repeat="r in reviews | filter: reviewSearch | startFrom:currentPageReview | limitTo:pageSize">
+                <p><b>Employee ID: </b>{{ r.userId }}</p>
+                <p><b>Supervisor ID: </b>{{ r.supervisorId }}</p>
+                <p><b>Review Period: </b>{{ r.reviewPeriod }}</p>
+                <p><b>Total Points: </b>{{ r.totalPoints }}</p>
+                <button ui-sref="app.editReview({ id: {{r.id}} })" class="btn btn-sm btn-info">Update</button>
+                <button ng-click="deleteReview(r)" class="btn btn-sm btn-danger">Delete</button>
+            </div>
+        </div>
+        <div class="filter btn-group-wrap">
+            <div class="btn-group">
+                <button class="btn btn-sm filter" ng-disabled="currentPageReview == 0" ng-click="previousPageReview()">
+                        Previous
+                    </button>
+                <button class="btn btn-sm filter" ng-disabled="currentPageReview >= reviews.length - pageSize" ng-click="nextPageReview()">
+                        Next
+                    </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row display">
+        <div class="form-group">
+            <h3> Transaction Administration</h3>
+            <h4>Search For Transactions</h4>
+            <input type="text" class="form-control" placeholder="Search..." ng-model="transactionSearch">
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3 display-card" ng-repeat="t in transactions | filter: transactionSearch | startFrom:currentPageTransaction | limitTo:pageSize">
+                <p><b>Employee ID: </b>{{ t.userId }}</p>
+                <p><b>Total Cost: </b>{{ t.totalCost }}</p>
+                <button ng-click="editTransaction(t)" class="btn btn-sm btn-info">Update</button>
+                <button ng-click="deleteTransaction(t)" class="btn btn-sm btn-danger">Delete</button>
+            </div>
+        </div>
+        <div class="filter btn-group-wrap">
+            <div class="btn-group">
+                <button class="btn btn-sm filter" ng-disabled="currentPageTransaction == 0" ng-click="previousPageTransaction()">
+                            Previous
+                        </button>
+                <button class="btn btn-sm filter" ng-disabled="currentPageTransaction >= transactions.length - pageSize" ng-click="nextPageTransaction()">
+                            Next
+                        </button>
+            </div>
+        </div>
+    </div>
+    <div ng-show="edittran" class="row display">
+        <h4>Edit Transaction</h4>
+        <div class="form-group col-md-6">
+            <label for="employeeId">Employee Id:</label>>
+            <input type="number" ng-model="currentTransaction.userId" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="totalCost">Total Cost:</label>>
+            <input type="number" ng-model="currentTransaction.totalCost" class="form-control" />
+        </div>
+        <div class="text-center">
+            <button ng-click="saveTransaction()" class="btn btn-sm btn-success">Save</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="navbar navbar-fixed-left">
+    <a class="navbar-brand title" href="#">perFUNance</a>
+    <ul class="nav navbar-nav">
+        <li><a class="subMenu" ui-sref="app.home">Home</a></li>
+        <li><a class="subMenu" ng-if="currentUser != undefined" ui-sref="app.rewards">Rewards</a></li>
+        <li><a class="subMenu" ng-if="currentUser != undefined" ui-sref="app.game">Gamble</a></li>
+        <li><a class="subMenu" ng-if="currentUser == undefined" ui-sref="app.newAccount">Sign Up</a></li>
+
+        <li class="dropdown subMenu"><a class="dropdown-toggle subMenu" ng-if="currentUser != undefined" data-toggle="dropdown">Your Account <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a class="subMenu" ui-sref="app.viewAccount">Profile</a></li>
+                <li ng-if="currentUser.isSuperVisor == true"><a class="subMenu" ui-sref="app.newReview">Write a Review</a></li>
+                <li class="divider"></li>
+                <li ng-if="currentUser.userName == 'admin'"><a class="subMenu" ui-sref="app.manage">Admin - Manage</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+<nav class="navbar top fixed-top" id="secondNav">
+    <ul class="navbar-nav log">
+        <li class="nav-item">
+            <a class="nav-link sign" ng-if="currentUser == undefined" ui-sref="app.login">
+            <i class="fa fa-fw fa-sign-in"></i>
+            Log In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link sign" ng-click="logout()" ng-if="currentUser != undefined" data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-fw fa-sign-out"></i>
+                Log Out</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,85 @@
+<div class="container defaultcontainer">
+    <h3>Personal Information</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <p><b>First Name: </b>{{ currentUser.firstName }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Middle Name: </b>{{ currentUser.middleName }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Last Name: </b>{{ currentUser.lastName }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><b>Address: </b>{{ currentUser.address1 }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><b>Apt/Suite: </b>{{ currentUser.address2 }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>City :</b>{{ currentUser.city }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>State: </b>{{ currentUser.state}}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Zip: </b>{{ currentUser.zip }}</p>
+        </div>
+        <div class="col-md-12">
+            <p><b>Email: </b>{{ currentUser.emailAddress }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Birth Date: </b>{{ currentUser.birthDate | date: 'MM/dd/yyyy' }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Social Security: </b>{{ currentUser.socialSecurity }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Position: </b>{{ currentUser.position }}</p>
+        </div>
+    </div>
+
+    <h3>Account Information</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <p><b>User Name: </b>{{ currentUser.userName }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Password: </b>{{ currentUser.passWord }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>Points Available: </b>{{ currentUser.totalPoints }}</p>
+        </div>
+    </div>
+
+    <div ng-if="currentUser.isSuperVisor == false">
+        <h3>Performance Information</h3>
+        <div class="row" ng-repeat="review in currentReviews">
+            <div class="col-md-3">
+                <p><b>Review Period: </b>{{ review.reviewPeriod }}</p>
+            </div>
+            <div class="col-md-3">
+                <p><b>SupervisorId: </b>{{ review.supervisorId }}</p>
+            </div>
+            <div class="col-md-3">
+                <p><b>Total Points: </b>{{ review.totalPoints }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="currentUser.isSuperVisor == true">
+        <h3>Review Information</h3>
+        <div class="row" ng-repeat="review in currentReviews">
+            <div class="col-md-3">
+                <p><b>Review Period: </b>{{ review.reviewPeriod }}</p>
+            </div>
+            <div class="col-md-3">
+                <p><b>RevieeeId: </b>{{ review.userId }}</p>
+            </div>
+            <div class="col-md-3">
+                <p><b>Points Given: </b>{{ review.totalPoints }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

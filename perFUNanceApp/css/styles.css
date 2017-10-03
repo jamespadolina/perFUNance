@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /* Entire Site */
+
+  .body-site {
+    background-image: url("./images/office.jpg") !important;
+    /* background-size: 1920px 1080px !important; */
+    background-repeat: repeat !important;
+  }
+
+  .defaultcontainer {
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding: 30px;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+  }
+
+  /* NavBar Left*/
+
+  .title {
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+  }
+  .navbar-fixed-left {
+    width: 200px;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    border: none;
+    color: darkgray;
+
+  }
+  
+  .navbar-fixed-left .navbar-nav > li {
+    float: none;  /* Cancel default li float: left */
+    width: 139px;
+  }
+  
+  .navbar-fixed-left + .container {
+    padding-left: 160px;
+  }
+
+  .subMenu {
+      font-size: 20px;
+      color: white;
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+
+  }
+  
+  /* On using dropdown menu (To right shift popuped) */
+  .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+    margin-top: -50px;
+    margin-left: 140px;
+  }
+
+  /* NavBar Top */
+
+  .top {
+      background: none;
+      margin-left: 200px;
+      border-radius: 0; 
+      }
+
+  .log {
+      float: right;
+      list-style: none;
+
+  }
+
+  .sign {
+      font-size: 20px;
+      margin: 5px;
+      color: white;
+  }
+
+    /* Footer */
+
+  .footer {
+      margin-top: 100px;
+  }
+
+  /* homePage */
+    .homeHeader {
+        text-align: center;
+    }
+
+    .blackText {
+        color: black;
+    }
+
+  /* Login */
+  .logincontainer {
+      max-width: 400px;
+      box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  }
+
+  .card-header {
+    max-width: 600px;
+    padding: .75rem 1.25rem;
+    margin: 0 auto;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+    
+  }
+
+  .login-title {
+      max-width: 390px;
+  }
+
+  .card-body {
+    max-width: 400px;
+    margin: 0 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    
+  }
+
+  /*Sign Up Page */
+  .checkbox {
+      display: inline;
+  }
+
+  .btnrow {
+      margin-left: 500px;
+  }
+
+  /*Write a New Review */
+
+  .rating {
+    float:left;
+}
+
+
+/* Rewards Page */
+.rewardimg {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.reward-card {
+    margin-bottom: 20px;
+    
+}
+
+/*Manage Page */
+
+.manage {
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.display {
+    background-color: white;
+    padding: 15px;
+}
+
+.display-card {
+    margin-bottom: 20px;
+}
+
+
+.btn-group-wrap {
+    text-align: center;
+}
+
+div.btn-group {
+    margin: 0 auto; 
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+}
+
+/*Cart*/
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+  }
+  @media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+    width:20%;
+    display: inline !important;
+  }
+  .actions .btn{
+    width:36%;
+    margin:1.5em 0;
+  }
+  
+  .actions .btn-info{
+    float:left;
+  }
+  .actions .btn-danger{
+    float:right;
+  }
+  
+  table#cart thead { display: none; }
+  table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+  table#cart tbody tr td:first-child { background: #333; color: #fff; }
+  table#cart tbody td:before {
+    content: attr(data-th); font-weight: bold;
+    display: inline-block; width: 8rem;
+  }
+  
+  table#cart tfoot td{display:block; }
+  table#cart tfoot td .btn{display:block;}  
+  }
+  
+  .finalcheckout {
+    margin: 20px auto;
+    width: 100px;
+  }
+
+  .checkout {
+    margin: 20px 0px 0px 515px;
+  }
+
+  .checkoutbtn {
+    margin: 0px auto;
+  }
+
+  /*Game Page */
+
+  table.minefield {
+    margin: 0 auto;
+    line-height:0;
+    border-spacing:0;
+      
+  }
+
+  .minefield td {
+      padding: 0;
+  }
+
+  td > img {
+      height: 24px;
+      width: 24px;
+  }
+
+  .gamerow {
+      margin-bottom: 20px;
+  }
+
+
+
+ 
+
+  

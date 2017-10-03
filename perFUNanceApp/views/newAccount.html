@@ -1,0 +1,80 @@
+<div class="container defaultcontainer">
+    <div class="row">
+        <h2> {{heading}}</h2>
+        <p ng-show="enrollment"> Enter your enrollment information below and click the "Submit" button</p>
+        <p ng-show="update"> Update your enrollment information below and click the "Save" button</p>
+    </div>
+    <div class="row">
+        <h3>Personal Information</h3>
+        <form class="col-md-4 form-group">
+            <label for="firstName">First Name (required): </label>
+            <input ng-model ="user.firstName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="middleName">Middle Name (optional): </label>
+            <input ng-model ="user.middleName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="lastName">Last Name (required): </label>
+            <input ng-model = "user.lastName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-6 form-group">
+            <label for="address">Address</label>
+            <input ng-model ="user.address1" type="text" class="form-control" />
+        </form>
+        <form class="col-md-6 form-group">
+            <label for="address2">Apt/Suite: </label>
+            <input ng-model ="user.address2" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="city">City: </label>
+            <input ng-model ="user.city" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="state">State: </label>
+            <input ng-model ="user.state" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="zip">Zip: </label>
+            <input ng-model ="user.zip" type="text" class="form-control" />
+        </form>
+        <form class="col-md-12 form-group">
+            <label for="email">Email: </label>
+            <input ng-model ="user.emailAddress" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="birthdate">Birth Date: </label>
+            <input ng-model ="user.birthDate" placeholder="MM/DD/YYYY" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="social">Social Security: </label>
+            <input ng-model ="user.socialSecurity" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="position">Position: </label>
+            <input ng-model ="user.position" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="isSupervisor">Are you in a supervisory role? </label>
+            <input ng-model ="user.isSuperVisor" class="checkbox" type="checkbox" class="form-control" />
+        </form>
+    </div>
+
+    <div class="row">
+        <h3>Account Information</h3>
+        <form class="col-md-6 form-group">
+            <label for="username">User Name: </label>
+            <input ng-model ="user.userName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-6 form-group">
+            <label for="password">Password: </label>
+            <input ng-model ="user.passWord" type="password" class="form-control" />
+        </form>
+    </div>
+    <div class="row btnrow">
+            <button ng-show="submitbtn" ng-click="submitAccount()" type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+    <div class="row btnrow">
+            <button ng-show="savebtn" ng-click="saveAccount()" type="submit" class="btn btn-primary btn-lg">Save</button>
+    </div>
+</div>

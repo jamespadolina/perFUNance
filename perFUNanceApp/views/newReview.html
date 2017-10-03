@@ -1,0 +1,82 @@
+<div class="container defaultcontainer">
+    <div class="row">
+        <h2> {{ heading }}</h2>
+    </div>
+    <div class="row">
+        <h3>Employee Information</h3>
+        <form class="col-md-3 form-group">
+            <label for="id">Employee ID (required): </label>
+            <input ng-model="review.userId" type="number" class="form-control" />
+        </form>
+        <form class="col-md-3 form-group">
+            <label for="firstName">First Name (required): </label>
+            <input ng-model="firstName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-3 form-group">
+            <label for="middleName">Middle Name (optional): </label>
+            <input ng-model="middleName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-3 form-group">
+            <label for="lastName">Last Name (required): </label>
+            <input ng-model="lastName" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="position">Position: </label>
+            <input ng-model="position" type="text" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="supervisorID">Supervisor ID: </label>
+            <input ng-model="review.supervisorId" type="number" class="form-control" />
+        </form>
+        <form class="col-md-4 form-group">
+            <label for="reviewPeriod">Review Period: </label>
+            <input ng-model="review.reviewPeriod" type="text" class="form-control" />
+        </form>
+    </div>
+
+    <div class="row">
+        <h3>Rating</h3>
+        <div class="row">
+            <form class="form-group">
+                <label class="col-md-4">Job Knowledge/Work Quality </label>
+                <fieldset class="rating">
+                    <input ng-model="review.rating1" type="radio" name="rating" ng-value="1" /><label for="star1" title="Sucks big time">1</label>
+                    <input ng-model="review.rating1" type="radio" name="rating" ng-value="2" /><label for="star2" title="Kinda bad">2</label>
+                    <input ng-model="review.rating1" type="radio" name="rating" ng-value= "3" /><label for="star3" title="Meh">3</label>
+                    <input ng-model="review.rating1" type="radio" name="rating" ng-value= "4" /><label for="star4" title="Pretty good">4</label>
+                    <input ng-model="review.rating1" type="radio" name="rating" ng-value= "5" /><label for="star5" title="Rocks!">5</label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="row">
+            <form class="form-group">
+                <label class="col-md-4">Communication/Listening Skills </label>
+                <fieldset class="rating">
+                    <input ng-model="review.rating2" type="radio" name="rating" ng-value="1" /><label for="star1" title="Sucks big time">1</label>
+                    <input ng-model="review.rating2" type="radio" name="rating" ng-value="2" /><label for="star2" title="Kinda bad">2</label>
+                    <input ng-model="review.rating2" type="radio" name="rating" ng-value="3" /><label for="star3" title="Meh">3</label>
+                    <input ng-model="review.rating2" type="radio" name="rating" ng-value="4" /><label for="star4" title="Pretty good">4</label>
+                    <input ng-model="review.rating2" type="radio" name="rating" ng-value="5" /><label for="star5" title="Rocks!">5</label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="row">
+            <form class="form-group">
+                <label class="col-md-4">Attendance/Punctuality </label>
+                <fieldset class="rating">
+                    <input ng-model="review.rating3" type="radio" name="rating" ng-value="1" /><label for="star1" title="Sucks big time">1</label>
+                    <input ng-model="review.rating3" type="radio" name="rating" ng-value="2" /><label for="star2" title="Kinda bad">2</label>
+                    <input ng-model="review.rating3" type="radio" name="rating" ng-value="3" /><label for="star3" title="Meh">3</label>
+                    <input ng-model="review.rating3" type="radio" name="rating" ng-value="4" /><label for="star4" title="Pretty good">4</label>
+                    <input ng-model="review.rating3" type="radio" name="rating" ng-value="5" /><label for="star5" title="Rocks!">5</label>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="row btnrow">
+        <button ng-show="submitbtn" ng-click="submit()" type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+    <div class="row btnrow">
+        <button ng-show="savebtn" ng-click="save()" type="submit" class="btn btn-primary btn-lg">Save</button>
+    </div>
+</div>
