@@ -9,12 +9,13 @@ Viusal Studio Code, Microsoft Visual Studio 2017, Microsoft Sql Server Managemen
 
 #Languages Used:
 
-HTML5, CSS3, ANGULAR, BOOTSTRAP, JAVASCRIPT, C#, ASP.NET, ms sql server
+HTML, CSS, ANGULAR, BOOTSTRAP, JAVASCRIPT, C#, ASP.NET, ms sql server,  Entity Framework Core 2.0
 
-#admin page
+#challenges
 
-- monitor user transactions
-- 
+Implementing custom game logic for the minesweeper game
+building custom API on the back-end
+manipulating data on the front-end to correctly nest under another object.
 
 
 
