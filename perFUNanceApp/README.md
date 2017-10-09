@@ -1,22 +1,25 @@
-#perFUNance!
-#About:
+perFUNance!
 
-perFUNance is a HR gamification application that is used to motivate employee participation, engagement, and loyalty. Where users have a chance to earn points to pay for rewards. In our gamification platform we used minesweeper, where players input an amount of points that they own and gamble to double their points and also be able to earn bonus points if they win.  
+Second group project using both front-end concepts and back-end concepts learned from Redwood Code Academy
 
-#Prerequisites:
+perFUNance Web Application
 
-Viusal Studio Code, Microsoft Visual Studio 2017, Microsoft Sql Server Management 2017
+perFUNance is a HR gamification application that is used to motivate employee participation, engagement, and loyalty. Where users have a chance to earn points to pay for rewards. In our gamification platform we used minesweeper, where players input an amount of points that they own and gamble to double their points and also be able to earn bonus points if they win.
 
-#Languages Used:
+Technologies
 
-HTML, CSS, ANGULAR, BOOTSTRAP, JAVASCRIPT, C#, ASP.NET, ms sql server,  Entity Framework Core 2.0
+HTML, CSS, AngularJS, UI-Router, Bootstrap, JavaScript, C#, ASP.NET Core, SQL, Microsoft SQL Server, Microsoft SQL Server Management Studio, Entity Framework Core 2.0, MVC and CRUD design pattern for both front and back-end
 
-#challenges
+Planning and Approach
 
-Implementing custom game logic for the minesweeper game
+Tasks were delegated and roles were discussed and agreed upon as a team. The plan consisted of building the core backend framework and functions using the Entity Framework and then construct a front-end tailored to a positive user experience ​
+
+Wireframe
+
+Pencil: https://pencil.evolus.vn/
+
+Challenges
+
+implementing custom game logic for the minesweeper game
 building custom API on the back-end
 manipulating data on the front-end to correctly nest under another object.
-
-
-
-
